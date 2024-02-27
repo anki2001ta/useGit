@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import TableComponent from "@/Components/ui/table";
+import TableComponent from "@/components/ui/table";
 
 const buyersData = [
   {

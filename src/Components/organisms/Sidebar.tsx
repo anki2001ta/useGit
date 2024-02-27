@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
@@ -58,7 +58,7 @@ const Sidebar: React.FC = () => {
       id="sidebar"
       className="Sidebar h-screen w-64 overflow-y-auto overflow-x-hidden bg-black px-6 py-4 pt-8 shadow-sm 2xl:w-72 2xl:pt-10"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-   >
+    >
       <Link href="/" className="mb-8 flex items-center gap-3 2xl:mb-10">
         <Image
           src="/useFun.png"
@@ -67,9 +67,11 @@ const Sidebar: React.FC = () => {
           height={600}
           className="h-7 w-7 2xl:h-8 2xl:w-8"
         />
-        <h5 className="text-body-xl font-semibold text-white uppercase">DASHBOARD</h5>
+        <h5 className="text-body-xl font-semibold text-white uppercase">
+          DASHBOARD
+        </h5>
       </Link>
-    
+
       <nav className="mt-10 flex w-full flex-col items-start gap-3">
         <SidebarMenu
           icon={<HouseSimpleIcon />}
@@ -82,10 +84,9 @@ const Sidebar: React.FC = () => {
         <SidebarMenu
           active={showUsersMenu}
           onClick={() => setShowUsersMenu(!showUsersMenu)}
-          icon={<UsersIcon/>}
+          icon={<UsersIcon />}
           name="Users"
           variant="sub-menu"
-          
         />
 
         <SidebarExpand show={showUsersMenu}>
@@ -119,7 +120,7 @@ const Sidebar: React.FC = () => {
         <SidebarMenu
           active={showTransactionsMenu}
           onClick={() => setShowTransactionsMenu(!showTransactionsMenu)}
-          icon={<ReceiptIcon/>}
+          icon={<ReceiptIcon />}
           name="Host"
           variant="sub-menu"
         />
@@ -153,7 +154,7 @@ const Sidebar: React.FC = () => {
         <SidebarMenu
           active={showAgency}
           onClick={() => setShowAgencyMenu(!showAgency)}
-          icon={<ReceiptIcon/>}
+          icon={<ReceiptIcon />}
           name="Agency"
           variant="sub-menu"
         />
@@ -294,10 +295,9 @@ const Sidebar: React.FC = () => {
           />
         </SidebarExpand>
 
+        {/* Gifts */}
 
-{/* Gifts */}
-
-<SidebarMenu
+        <SidebarMenu
           active={showGift}
           onClick={() => setShowGift(!showGift)}
           icon={<ReceiptIcon />}
@@ -326,8 +326,6 @@ const Sidebar: React.FC = () => {
             variant="expand"
             href="/transactions/manage-return"
           />
-
-          
         </SidebarExpand>
 
         <SidebarMenu
